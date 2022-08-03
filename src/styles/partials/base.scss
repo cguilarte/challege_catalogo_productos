@@ -1,0 +1,91 @@
+:root,
+body,
+html {
+    background-color: #eff2f5;
+    font-family: "Helvetica Neue";
+    font-weight: normal;
+    cursor: default;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--color-text);
+}
+
+.scaffold-layout {
+    margin-bottom: var(--scaffold-layout-gutter);
+}
+
+.scaffold-layout-container {
+    margin-left: auto;
+    margin-right: auto;
+    overflow: unset;
+    margin-top: 15px;
+
+    @media screen and (min-width: 576px) {
+        overflow: unset;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: var(--scaffold-layout-md-max-width);
+    }
+
+    @media screen and (min-width: 992px) {
+        width: var(--scaffold-layout-lg-max-width);
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: var(--scaffold-layout-xl-max-width);
+    }
+}
+
+.scaffold-layout__row {
+    margin: var(--scaffold-layout-gutter) 0;
+}
+
+.scaffold-layout__content {
+    column-gap: var(--scaffold-layout-gutter);
+    display: grid;
+    grid-area: content;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+    row-gap: var(--scaffold-layout-gutter);
+
+    @media screen and (max-width: 480px) {
+        row-gap: 0rem;
+    }
+}
+
+.scaffold-layout__content--sidebar-main-aside {
+    grid-template-areas:
+        "sidebar";
+
+
+    @media screen and (min-width: 768px) {
+        grid-template-areas: "main";
+        grid-template-columns: minmax(0, 5fr);
+    }
+
+    @media screen and (min-width: 992px) {
+        grid-template-areas: "main";
+        grid-template-columns: minmax(0, 1fr);
+
+    }
+
+}
+
+.scaffold-layout__main {
+    grid-area: main;
+    display: block;
+
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.link {
+    color: #0B65C2;
+    text-decoration: underline;
+    font-size: 0.8em;
+    cursor: pointer;
+}

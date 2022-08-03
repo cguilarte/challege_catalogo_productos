@@ -1,0 +1,50 @@
+.rowInput {
+    padding: 1rem 1.4rem 0rem 1.4rem;
+    font-size: 16px;
+
+    .rowLabel {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 5px;
+
+        label {
+            font-size: 0.875em;
+            color: #333;
+            font-weight: bold;
+        }
+    }
+
+    .inputUser {
+        position: relative;
+        height: 1em;
+        border-radius: 0.25rem;
+        border: 1px solid #ccc;
+        padding: 0.5rem;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: text;
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+
+
+        &.disabled {
+            pointer-events: none;
+            opacity: 0.8;
+            background: #f8f8f8;
+        }
+
+    }
+
+    .inputText {
+        width: 100%;
+        font-size: 0.875em;
+        font-weight: 500;
+        cursor: text;
+        border: 0;
+        outline: 0;
+        background-color: #fff;
+
+    }
+}

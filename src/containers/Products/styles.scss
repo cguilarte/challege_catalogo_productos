@@ -1,0 +1,108 @@
+.table-auto {
+    margin-top: 10px;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0px;
+
+    thead,
+    tbody {
+        display: table-header-group;
+
+        tr {
+            color: inherit;
+            display: table-row;
+            vertical-align: middle;
+            outline: 0px;
+
+            th,
+            td {
+                font-family: Roboto, Helvetica, Arial, sans-serif;
+                font-weight: 500;
+                font-size: 0.875rem;
+                line-height: 1.2rem;
+                letter-spacing: 0.01071em;
+                display: table-cell;
+                vertical-align: inherit;
+                border-bottom: 1px solid rgb(224, 224, 224);
+                text-align: left;
+                padding: 16px;
+                color: rgba(0, 0, 0, 0.87);
+            }
+
+            th {
+                font-weight: bold;
+                padding: 10px 16px;
+            }
+        }
+    }
+
+    tbody tr:hover {
+        background-color: #eff2f5;
+    }
+
+}
+
+.bagItemStatus {
+    background-color: rgba(0, 0, 0, 0.04);
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    border-radius: 6px;
+
+
+    &.active {
+        background-color: #62a409;
+        color: #fff;
+    }
+
+    &.inactive {
+        background-color: #e52d26;
+        color: #fff;
+    }
+}
+
+
+.cardFiltro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+
+
+    h1 {
+        margin: 0;
+    }
+
+    .option {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+
+.cardFiltro__option {
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 10px;
+    background-color: #eff2f5;
+    margin-top: 10px;
+    transition: all .3s ease-in-out;
+
+    &.show {
+        display: flex;
+    }
+
+    .rowInput {
+        padding: 0;
+    }
+
+    .inputGroup {
+        display: flex;
+        justify-content: space-between;
+        width: 200px;
+        margin-left: 10px;
+    }
+}
